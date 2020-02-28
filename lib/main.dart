@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget{
               ),
               child: Text('This is drawer header')),
           ListTile(
-            title: Text('Available Trips'),
+            title: Text('Profile'),
           ),
           ListTile(
             title: Text('Trips'),
@@ -51,6 +51,21 @@ class HomeScreen extends StatelessWidget{
 
         ],
       ),
+      ),
+    );
+  }
+
+}
+
+class CustomListTile extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return InkWell(
+      child: Row(
+        children: <Widget>[
+          Icon(Icons.person)
+        ],
       ),
     );
   }

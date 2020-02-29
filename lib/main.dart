@@ -30,10 +30,10 @@ class HomeScreen extends StatelessWidget{
                 ])
               ),
               child: Text('This is drawer header')),
-          CustomListTile(),
-          CustomListTile(),
-          CustomListTile(),
-          CustomListTile(),
+          CustomListTile(Icons.person,'Profile',()=>{}),
+          CustomListTile(Icons.person,'Profile',()=>{}),
+          CustomListTile(Icons.person,'Profile',()=>{}),
+          CustomListTile(Icons.person,'Profile',()=>{}),
 
         ],
       ),
@@ -48,7 +48,7 @@ class CustomListTile extends StatelessWidget{
   String text;
   Function onTap;
 
-  CustomListTile(this.Icon,this.text,this.onTap);
+  CustomListTile(this.icon,this.text,this.onTap);
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class CustomListTile extends StatelessWidget{
       padding: const EdgeInsets.fromLTRB(8.0, 0, 8.0, 0),
       child: InkWell(
         splashColor: Colors.orangeAccent,
-        onTap: ()=>{},
+        onTap: onTap,
         child: Container(
           height: 40,
           child: Row(
@@ -65,10 +65,10 @@ class CustomListTile extends StatelessWidget{
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Icon(Icons.person),
+                  Icon(icon),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text('Profile',style: TextStyle(
+                    child: Text(text,style: TextStyle(
                       fontSize: 16.0
                     ),),
                   ),

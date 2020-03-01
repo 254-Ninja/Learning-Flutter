@@ -33,7 +33,10 @@ class HomeScreen extends StatelessWidget{
                 child: Column(
                   children: <Widget>[
                     Material(
+                      borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                      child: Padding(padding: EdgeInsets.all(8.0),
                       child: Image.asset('images/test.jpg',width: 100,height: 100,),
+                      )
                     )
                   ],
                 ),
